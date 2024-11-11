@@ -4,7 +4,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   }
   
   body {
@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #F40A08;
+    background-color: #008B8B;
     padding: 10px 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -42,7 +42,7 @@
   }
   
   .menu a {
-    font-size: 18px;
+    font-size: 10px;
     font-weight: 500;
     color: white;
     text-decoration: none;
@@ -243,7 +243,7 @@ body {
     background-color: #3d3c3b;
     border-radius: 5px;
     border: 2px solid hsl(0, 0%, 0%);
-    width: 450px;
+    width: 50vw;
     max-width: 100%;
     margin-top: 50px;
     box-shadow: 5px 5px 15px black;
@@ -251,13 +251,16 @@ body {
 
 .header {
     padding: 30px 40px;
+
 }
 
 .header h2 {
     font-weight: 600;
     color: #fff;
-    font-size: 30px;
+    font-size: 2vwpx;
 }
+
+
 
 .form {
     padding: 0 40px 30px;

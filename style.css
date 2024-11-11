@@ -1,9 +1,10 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   }
   
   body {
@@ -14,16 +15,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #F40A08;
+    background-color: #008B8B;
     padding: 10px 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 999;
     color: white;
     position: relative;
   }
+
+  .price{
+    color: red;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
 
 /* ESTILIZAÇÃO DO MENU HAMBURGUER*/
 
@@ -32,32 +40,6 @@
     height: 24px;
     background-image: url(./Menu-h.png);
     display: inline-block;
-  }
-
-  /* Regras de media query */
-
-  @media screen and (max-width: 450px){
-    .logo{
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .search{
-      width: 10px;
-    }
-
-    .menu a {
-      display: none;
-    }
-
-    
-  }
-
-  @media screen and (min-width: 450px){
-    .hamburguer{
-      display: none;
-      cursor: pointer;
-    }
   }
   
 .lista-menu{
@@ -69,14 +51,14 @@
 
 .lista_menu__item{
   padding: 1em;
-  background-color: #ff5555;
+  background-color: #26e2bc;
 }
 
 .container__botao:checked ~ .lista-menu{
   display: block;
 }
-/*precisamos construir esse span de forma que ele fique visivel no projeto
-Tem um video legal sobre isso no youtube mas o idela é rever o material da alura no curso Responsividade com mobile First*/
+
+
 .container__botao{
   display: none;
 }
@@ -122,7 +104,7 @@ Tem um video legal sobre isso no youtube mas o idela é rever o material da alur
   }
   
   .menu a {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     color: white;
     text-decoration: none;
@@ -273,18 +255,7 @@ Tem um video legal sobre isso no youtube mas o idela é rever o material da alur
     cursor: pointer;
   }
   
-  @media (max-width: 1000px){
-    .nav{
-      padding: 15px;
-    }
-    section{
-      padding: 3em 0 2rem;
-    }
-    .container{
-      margin: 0 auto;
-      width: 90%;
-    }
-  }
+
 
   select {
     width: 50%;
@@ -330,6 +301,9 @@ select option:nth-child(odd):hover {
   .search {
     display: flex;
     align-items: center;
+    border-radius: 10px;
+    gap: 5px;
+
   }
   
   .search input {
@@ -337,6 +311,10 @@ select option:nth-child(odd):hover {
     padding: 10px;
     border-radius: 5px;
     margin-right: 10px;
+  }
+
+  .search input{
+    background-color: #ffffff;
   }
   
   .search button {
@@ -394,19 +372,22 @@ select option:nth-child(odd):hover {
   
   .condicoes-cards {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
     gap: 20px;
+    padding: 1rem;
   }
-  
+ 
   .condicoes-card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 10px #000;
     padding: 20px;
     margin-bottom: 40px;
-    flex-basis: calc(33.33% - 20px);
+    width: 370px;
   }
   
   .condicoes-card h3 {
@@ -434,7 +415,7 @@ select option:nth-child(odd):hover {
   
   .produtos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-gap: 30px;
     padding: 50px;
     border-bottom: 2px solid black;
@@ -457,6 +438,7 @@ select option:nth-child(odd):hover {
   .produto img {
     max-width: 250px;
     height: 250px;
+    margin: 0 auto; /* Adicionei essa margin */
   }
   
   .produto h3 {
@@ -473,7 +455,8 @@ select option:nth-child(odd):hover {
   }
   
   .produto button {
-    background-color: #00a2ff;
+    background-color: #008080;
+    font-size: 0.9rem;
     color: white;
     border: none;
     border-radius: 5px;
@@ -593,3 +576,108 @@ select option:nth-child(odd):hover {
   .social-media li:last-child {
     margin-right: 0;
   }
+
+
+  i{
+    position: fixed;
+  }
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+    /* Regras de media query */
+
+  @media (max-width: 1440px){
+
+    
+    .nav{
+      padding: 15px;
+    }
+    section{
+      padding: 3em 0 2rem;
+    }
+    .container{
+      margin: 0 auto;
+      width: 90%;
+    }
+  }
+
+
+  @media screen and (max-width: 1100px) {
+    .menu a {
+      font-size: 10px;
+    }
+
+  }
+  
+
+  @media screen and (max-width: 950px) {
+    
+    input, button{
+      display: none;
+    }
+
+    .bx-shopping-bag:before{
+      position: fixed;
+      bottom: 500px;
+      right: 20px;
+      background-color: #008B8B;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      z-index: 999;
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .menu {
+      display: flex;
+      /* flex-direction: row;
+      flex-wrap: wrap; */
+    }
+
+    .sobre-nos {
+      flex-direction: column;
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+
+    @media screen and (max-width: 500px){
+      .logo{
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .condicoes-cards, .sobre-nos, .produtos{
+        flex-wrap: wrap;
+      }  
+
+      .search{
+        display: none;
+      }
+  
+      .search{
+        width: 10px;
+      }
+  
+      .menu a {
+        display: none;
+      }
+    }
+  
+    @media screen and (min-width: 500px){
+      .hamburguer{
+        display: none;
+        cursor: pointer;
+      }
+
+      
+      
+    }
+
+    #btn_enviar{
+      display: block;
+    }
