@@ -672,10 +672,7 @@ select option:nth-child(odd):hover {
       .hamburguer{
         display: none;
         cursor: pointer;
-      }
-
-      
-      
+      }      
     }
 
     #btn_enviar{
